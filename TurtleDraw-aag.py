@@ -45,8 +45,8 @@ while line:
         currentPoint = [x, y]
         totalDistance = totalDistance + math.dist(previousPoint,currentPoint)
         print(math.dist(previousPoint, currentPoint))
-        print(previousPoint)
-        print(currentPoint)
+        print('Previous Point=' + str(previousPoint))
+        print('Current Point=' + str(currentPoint))
         print('Total Distance=' + str(totalDistance))
 
         # Todo: Find total distance when Pen is Down. Only when pen is down, add distance to total
