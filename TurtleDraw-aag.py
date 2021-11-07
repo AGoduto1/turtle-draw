@@ -26,18 +26,14 @@ turtleDraw.penup()
 
 print('Reading a text file line by line.')
 turtleDrawTextfile = open(TEXTFILENAME, 'r')
-line = turtleDrawTextfile.readline()
+turtleLine = turtleDrawTextfile.readline()
 
 totalDistance = 0
 previousPoint = [0, 0]
-# currentPoint = [1, 1]
-# print (math.dist(previousPoint, currentPoint))
-# input("\nPress 'enter' to close Application...")
 
-
-while line:
-    print(line, end='')
-    parts = line.split(' ')
+while turtleLine:
+    print(turtleLine, end='')
+    parts = turtleLine.split(' ')
 
     if (len(parts) == 3):
         color = parts[0]
@@ -45,7 +41,7 @@ while line:
         y = int(parts[2])
 
         currentPoint = [x, y]
-        totalDistance = totalDistance + math.dist(previousPoint,currentPoint)
+        totalDistance = totalDistance + math.dist(previousPoint,currentPoint)        
         print(math.dist(previousPoint, currentPoint))
         print('Previous Point=' + str(previousPoint))
         print('Current Point=' + str(currentPoint))
@@ -65,10 +61,12 @@ while line:
     if (len(parts) == 1):
         turtleDraw.penup()
 
-    line = turtleDrawTextfile.readline()
+    turtleLine = turtleDrawTextfile.readline()
 
+turtle.write('Total Distance=' + str(totalDistance))
 # Todo: Print the total near the bottom
 turtle.done()
+
 
 input("\nPress 'enter' to close Application...")
 turtleDrawTextfile.close()
