@@ -1,7 +1,9 @@
 # TurtleDrawing 
 # Reading a text file line by line.
 # 
+# Project: TurtleDrawing
 # By: Angelo Goduto
+# Email: angeloagoduto@lewisu.edu
 #
 # All rights reserved
 
