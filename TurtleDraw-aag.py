@@ -17,8 +17,6 @@ with open(input('Enter file name: '), 'rU') as input_file:
 turtleBoarder = turtle.Screen()
 turtleBoarder.setup(450, 450) #This helped determine the size of the screen
 
-# Todo: Ask user for the file name.
-
 print('TurtleDraw')
 
 turtleDraw = turtle.Turtle()
