@@ -10,10 +10,9 @@
 import turtle
 import math
 
-TEXTFILENAME = 'turtle-draw.txt'
-# input('turtle-draw.txt')
-# So I tried using input to make a person select the turtle-draw.txt file but I couldn't
-# figure out why it wasn't working
+SPECIFICFILENAME = 'turtle-draw.txt'
+with open(input('Enter file name: '), 'rU') as input_file: 
+    print(input_file)
 
 turtleBoarder = turtle.Screen()
 turtleBoarder.setup(450, 450) #This helped determine the size of the screen
@@ -28,7 +27,7 @@ turtleDraw.penup()
 
 
 print('Reading a text file line by line.')
-turtleDrawTextfile = open(TEXTFILENAME, 'r')
+turtleDrawTextfile = open(SPECIFICFILENAME, 'r')
 turtleLine = turtleDrawTextfile.readline()
 
 totalDistance = 0 # This was the beginning distance
